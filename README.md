@@ -21,26 +21,65 @@ Full credit for NAS-Bench-NLP goes to the original authors. You can find the ori
 
 ## Getting Started
 
-A proper setup and installation guide will be provided in upcoming sessions. Until then, please follow the steps below to run the project.
+### 1. Clone the Repository
 
-### Running the Notebooks
+```bash
+git clone <your-repo-url>
+cd HyNAS-R-CHiPSAL-Experiments
+```
 
-The notebooks are numbered **1 to 3**. Run them **in order**:
+### 2. Run the Setup Script
 
-| Order | Notebook |
-|-------|----------|
-| 1️⃣   | Notebook 1 |
-| 2️⃣   | Notebook 2 |
-| 3️⃣   | Notebook 3 |
+This will automatically create a virtual environment and install all required dependencies:
 
-Simply open the notebooks directory and execute them sequentially.
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+### 3. Activate the Environment
+
+```bash
+source venv/bin/activate
+```
+
+### 4. Launch Jupyter
+
+```bash
+jupyter notebook
+```
+
+---
+
+## Running the Notebooks
+
+The notebooks are numbered **1 to 3**. Run them **strictly in order**:
+
+| Order | Notebook | Description |
+|-------|----------|-------------|
+| 1️⃣   | `01_baselines.ipynb` | Baseline models (LSTM, GRU) |
+| 2️⃣   | `02_hynas-r.ipynb` | HyNAS-R architecture search |
+| 3️⃣   | `03_train_hynas-r_found_arch.ipynb` | Train the found architecture |
+
+---
+
+## Dependencies
+
+All dependencies are listed in `requirements.txt` and installed automatically via `setup.sh`. Key packages include:
+
+- `torch` — deep learning framework
+- `datasets` — Hugging Face datasets
+- `scikit-learn` — evaluation metrics
+- `scipy`, `numpy`, `pandas` — numerical computing
+- `matplotlib` — visualization
+- `jupyter` — notebook environment
 
 ---
 
 ## Upcoming
 
 - Proper repository structure and cleanup
-- Installation and setup instructions
+- Full installation and setup documentation
 - Modular codebase with clear documentation
 
 ---
